@@ -10,7 +10,7 @@
 import SwiftUI
 import WebKit
 
-// Представление WKWebView для SwiftUI
+
 struct WebView: UIViewRepresentable {
     let url: URL
     
@@ -22,7 +22,6 @@ struct WebView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
-        // Обновление не требуется, если URL не меняется
     }
 }
 
@@ -30,7 +29,6 @@ struct CameraDetailView: View {
     let camera: Camera
     let baseURL: String
     
-    // Формируем URL для стрима
     var streamURL: URL? {
         let urlString = "\(baseURL)/live/media/DEMOSERVER/DeviceIpint.\(camera.displayId)/SourceEndpoint.video:0:0?w=0&h=0"
         return URL(string: urlString)
