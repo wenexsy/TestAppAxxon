@@ -59,7 +59,7 @@ struct EventsView: View {
         }
     }
     
-    // Загрузка новых событий (фоновая проверка)
+
     func fetchNewEvents() {
         guard let url = URL(string: "\(baseURL)/archive/events/detectors/DEMOSERVER/past/future?limit=\(limit)&offset=0") else {
             print("Неверный URL")
@@ -87,7 +87,7 @@ struct EventsView: View {
         }.resume()
     }
     
-    // Первоначальная загрузка и подгрузка при прокрутке
+
     func fetchEvents() {
         guard !isLoading else { return }
         isLoading = true
